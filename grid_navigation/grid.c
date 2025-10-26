@@ -1,8 +1,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#define GRID_ROWS 4
-#define GRID_COLS 4
+#define GRID_ROWS      4
+#define GRID_COLS      4
+#define TARGET_ROW     2
+#define TARGET_COL     2
+#define TARGET_SYMBOL 'X'
 
 void create_map(char *map, int num_rows, int num_cols, char init_value);
 
@@ -15,12 +18,15 @@ int main() {
 	char maze_grid[GRID_ROWS][GRID_COLS];
 	char initial_val = 'a';
 		
-	// Create and print map
+	// Create map
 	create_map(&maze_grid[0][0], GRID_ROWS, GRID_COLS, initial_val);
 	
 	printf("Size of maze_grid rows: %lu\n", sizeof(maze_grid)    / sizeof(maze_grid[0])   );
 	printf("Size of maze_grid cols: %lu\n", sizeof(maze_grid[0]) / sizeof(maze_grid[0][0]));
 	
+	maze_grid[TARGET_ROW][TARGET_COL] = TARGET_SYMBOL;
+	
+	// Print map
 	print_map(&maze_grid[0][0], GRID_ROWS, GRID_COLS);
 	
 	
