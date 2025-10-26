@@ -42,11 +42,11 @@ int main() {
 		};
 
 		// Place new target
-		maze_grid[current_pos[0]][current_pos[1]] = GRID_SYMBOL;
-		maze_grid[temp_pos[0]][temp_pos[1]]		  = TARGET_SYMBOL;
+		// maze_grid[current_pos[0]][current_pos[1]] = GRID_SYMBOL;
+		// maze_grid[temp_pos[0]][temp_pos[1]]		  = TARGET_SYMBOL;
 
-		current_pos[0]  = temp_pos[0];
-		current_pos[1]  = temp_pos[1];
+		// current_pos[0]  = temp_pos[0];
+		// current_pos[1]  = temp_pos[1];
 
 		// Print map
 		print_map(&maze_grid[0][0], GRID_ROWS, GRID_COLS);
